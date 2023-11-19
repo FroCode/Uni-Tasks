@@ -8,7 +8,7 @@ def is_triangle(a, b, c):
         return False, 0, 0
 a = float(input("Enter  a: "))
 b = float(input("Enter  b: "))
-c = float(input("Enter the length side c: "))
+c = float(input("Enter c: "))
 
 result, perimeter, area = is_triangle(a, b, c)
 
