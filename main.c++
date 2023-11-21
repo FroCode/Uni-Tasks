@@ -1,54 +1,69 @@
+/*
+  Function
+  - Built-In Functions
+  --- cctype Functions
+  ------ tolower()
+  ------ toupper()
+  ------ isupper()
+  ------ islower()
+  ------ isspace()
+
+  - Create 2 Applications
+  --- Swap Case App
+  --- Remove Spaces App
+*/
+
 #include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-#include <cstdlib>
-#include <queue>
-#include <ctime>
+#include <cctype>
+using namespace std;
 
-    class BST {
-        struct 
-        Node* root = nullptr;
-        void addHelper(int value, Node* temp); 
-        int getMaxHelper(Node* temp);
-        int getMinHelper(Node * temp);
-        public:
-            void add(int value);
-            int getMax();
-            int getMin();
-            void display_order() {
-        if(root == nullptr) return;
-        queue<Node*> q;
-        q.push(root);
-        while (!q.empty()) {
-            Node* temp = q.front();
-            q.pop();
-            cout << temp->data << " ";
-            if(temp->left != nullptr) {
-                q.push(temp->left);
-            }
-            if(temp->right != nullptr) {
-                q.push(temp->right);
-            }
-        }
-        
-    }
-    return 0;
-        
-    }
+int main()
+{
+  cout << "A\n";                      // A
+  cout << tolower('A') << "\n";       // 97 => ASCII Value
+  cout << char(tolower('A')) << "\n"; // a
+  cout << char(97) << "\n";           // a
+  cout << "=====================\n";
+  cout << "b\n";                      // b
+  cout << toupper('b') << "\n";       // 66 => ASCII Value
+  cout << char(toupper('b')) << "\n"; // B
+  cout << char(66) << "\n";           // B
+  cout << "=====================\n";
 
-    int main() {
-        BST obj;
-        obj.add(15);
-        obj.add(6);
-        obj.add(20);
-        obj.add(3);
-        obj.add(9);
-        obj.add(8);
-        obj.add(25);
-        display_order();
-    }
+  string nameone = "ElZEro"; // eLzeRO eLzeRO
+  int nameoneSize = size(nameone);
 
-    
+  for (int i = 0; i < nameoneSize; i++)
+  {
+    if (isupper(nameone[i]))
+    {
+      cout << char(tolower(nameone[i]));
+    }
+    else
+    {
+      cout << char(toupper(nameone[i]));
+    }
+    // cout << nameone[i] << "\n";
+    // cout << int(nameone[i]) << "\n";
+  }
+
+  cout << "\n=====================\n";
+
+  string nametwo = "E\nl  z  \n\te r\t\no";
+  int nametwoSize = size(nametwo);
+
+  for (int i = 0; i < nametwoSize; i++)
+  {
+    // if (nametwo[i] == ' ')
+    // {
+    //   continue;
+    // }
+    if (isspace(nametwo[i]))
+    {
+      continue;
+    }
+    cout << nametwo[i];
+  }
+
+  return 0;
 }
