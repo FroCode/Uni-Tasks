@@ -55,7 +55,7 @@ int main()
   for (int i = 0; i < nametwoSize; i++)
   {
     // {
-    //   continue;
+    //   c
     // }
     if (isspace(nametwo[i]))
     {
