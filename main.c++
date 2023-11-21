@@ -30,7 +30,7 @@ int main()
   cout << char(66) << "\n";           // B
   cout << "=====================\n";
 
-  string nameone = "ElZEro"; // eLzeRO eLzeRO
+  string nameone = "ElZEro"; // Muha
   int nameoneSize = size(nameone);
 
   for (int i = 0; i < nameoneSize; i++)
