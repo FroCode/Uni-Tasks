@@ -1,68 +1,17 @@
-/*
-  Function
-  - Built-In Functions
-  --- cctype Functions
-  ------ tolower()
-  ------ toupper()
-  ------ isupper()
-  ------ islower()
-  ------ isspace()
-
-  - Create 2 Applications
-  --- Swap Case App
-  --- Remove Spaces App
-*/
-
 #include <iostream>
-#include <cctype>
+#include <string>
+#include <vector>
 using namespace std;
+int main() {
 
-int main()
-{
-  cout << "A\n";                      // A
-  cout << tolower('A') << "\n";       // 97 => ASCII Value
-  cout << char(tolower('A')) << "\n"; // a
-  cout << char(97) << "\n";           // a
-  cout << "=====================\n";
-  cout << "b\n";                      // b
-  cout << toupper('b') << "\n";       // 66 => ASCII Value
-  cout << char(toupper('b')) << "\n"; // B
-  cout << char(66) << "\n";           // B
-  cout << "=====================\n";
-
-  string nameone = "ElZEro"; // Muha
-  int nameoneSize = size(nameone);
-
-  for (int i = 0; i < nameoneSize; i++)
-  {
-    if (isupper(nameone[i]))
-    {
-      cout << char(tolower(nameone[i]));
-    }
-    else
-    {
-      cout << char(toupper(nameone[i]));
-    }
-    // cout << nameone[i] << "\n";
-    // cout << int(nameone[i]) << "\n";
+  vector<int> v = {1, 2, 3, 4, 5};
+  vector<int>::iterator it = v.begin() + 1;
+  for (int i = 0 ; v.begin() + i != v.end(); i++) {
+    cout << "ele : " << *(v.begin() + i) << endl;
+  
   }
-
-  cout << "\n=====================\n";
-
-  string nametwo = "E\nl  z  \n\te r\t\no";
-  int nametwoSize = size(nametwo);
-
-  for (int i = 0; i < nametwoSize; i++)
-  {
-    // {
-    //   c
-    // }
-    if (isspace(nametwo[i]))
-    {
-      continue;
-    }
-    cout << nametwo[i];
-  }
-
+  cout << "first ele : " << *it << endl;
+  
   return 0;
+
 }

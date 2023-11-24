@@ -1,73 +1,62 @@
-# Program to Determine Arithmetic Mean of Student Grades
+import socket
 
-def calculate_grade_information(grades):
-    num_grades = len(grades)
-    average = sum(grades) / num_grades
+import psutil
 
-    if average <= 3.25:
-        grade_info = "Satisfactory"
-    elif 3.26 <= average <= 3.75:
-        grade_info = "Satisfactory+"
-    elif 3.76 <= average <= 4.25:
-        grade_info = "Good"
-    elif 4.26 <= average <= 4.60:
-        grade_info = "Good+"
-    elif 4.61 <= average <= 4.80:
-        grade_info = "Very Good"
-    else:
-        grade_info = "Excellent"
-
-    return num_grades, average, grade_info
-
-# Input grades using command line
-grades = []
-while True:
+def get_local_ip():
     try:
-        grade = float(input("Enter a grade (or type 'done' to finish): "))
-        if grade < 2.0 or grade > 5.0:
-            print("Invalid grade. Please enter a grade between 2.0 and 5.0.")
-            continue
-        if grade == 'done':
-            break
-        grades.append(grade)
-    except ValueError:
-        print("Invalid input. Please enter a valid numeric grade.")
+        # Create a socket object and connect to an external server
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))  # Connect to Google's public DNS server
+        local_ip = s.getsockname()[0]
+        s.close()
+        return local_ip
+    except socket.error:
+        return None
 
-num_grades, average, grade_info = calculate_grade_information(grades)
+# Example usage
+local_ip_address = get_local_ip()
 
-print(f"\nNumber of grades: {num_grades}")
-print(f"Average grade: {average:.2f}")
-print(f"Grade Information: {grade_info}")
+if local_ip_address:
+    print(f"Local IP address: {local_ip_address}")
+else:
+    print("Unable to retrieve local IP address.")
 
-# Horner's Scheme for Polynomial Evaluation
 
-def horner_scheme(coefficients, x):
-    result = coefficients[0]
-    for i in range(1, len(coefficients)):
-        result = result * x + coefficients[i]
-    return result
+def check_port(host, port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.settimeout(1)  # Set a timeout to limit the connection attempt duration
 
-# Examples
-# a)
-coefficients_a = [2, 0, 0, -3, 0, 5, -1]
-x_a = -2
-result_a = horner_scheme(coefficients_a, x_a)
-print(f"\nResult for a): {result_a}")
+    try:
+        sock.connect((host, port))
+        print(f"Port {port} is open on {host}")
+    except socket.error:
+        print(f"Port {port} is closed on {host}")
+    finally:
+        sock.close()
 
-# b)
-coefficients_b = [2, 0, 0, -3, 0, 5, -1]
-x_b = 3
-result_b = horner_scheme(coefficients_b, x_b)
-print(f"Result for b): {result_b}")
+# Example usage
+host = "155.158.58.91"  # Replace with the IP address or hostname of the target machine
 
-# c)
-coefficients_c = [2, -4, 3, 1]
-x_c = 2
-result_c = horner_scheme(coefficients_c, x_c)
-print(f"Result for c): {result_c}")
+ports_to_check = [3074, 4000, 6112, 6113, 6114, 6115, 6116, 6117, 6118, 6119, 20500, 20510, 27014, 27015, 27016, 27017, 27018, 27019, 27020, 27021, 27022, 27023, 27024, 27025, 27026, 27027, 27028, 27029, 27030, 27031, 27036, 28960]
 
-# d)
-coefficients_d = [-1, 0, 2, 0, 3, 5]
-x_d = -2
-result_d = horner_scheme(coefficients_d, x_d)
-print(f"Result for d): {result_d}")
+for port in ports_to_check:
+    check_port(host, port)
+
+
+
+
+def get_process_using_port(port):
+    for conn in psutil.net_connections():
+        if conn.laddr.port == port:
+            return psutil.Process(conn.pid)
+    return None
+
+# Example usage
+port_to_check = 3074  # Replace with the port you want to check
+
+process_using_port = get_process_using_port(port_to_check)
+
+if process_using_port:
+    print(f"Process using port {port_to_check}: {process_using_port.name()}")
+else:
+    print(f"No process found using port {port_to_check}")
