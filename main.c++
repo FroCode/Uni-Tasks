@@ -1,17 +1,46 @@
 #include <iostream>
 #include <string>
-#include <vector>
+
 using namespace std;
+
+class rectangle {
+private:
+    float length, width;
+
+public:
+    void setLength(float l) {
+        if (l >= 0) {
+            length = l;
+        } else {
+            cout << "Please enter a valid length" << endl;
+        }
+    }
+
+    float getLength() {
+        return length;
+    }
+
+    void setWidth(float w) {
+        if (w >= 0) {
+            width = w;
+        } else {
+            cout << "Please enter a valid width" << endl;
+        }
+    }
+
+    float getWidth() {
+        return width;
+    }
+
+    float getArea() {
+        return length * width;
+    }
+};
+
 int main() {
-
-  vector<int> v = {1, 2, 3, 4, 5};
-  vector<int>::iterator it = v.begin() + 1;
-  for (int i = 0 ; v.begin() + i != v.end(); i++) {
-    cout << "ele : " << *(v.begin() + i) << endl;
-  
-  }
-  cout << "first ele : " << *it << endl;
-  
-  return 0;
-
+    rectangle r1;
+    r1.setLength(10);
+    r1.setWidth(5);
+    cout << "Area: " << r1.getArea() << endl;
+    return 0;
 }
