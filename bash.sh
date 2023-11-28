@@ -9,6 +9,6 @@ echo "Hello, this is some content." > "$filename"
 echo "File '$filename' created and content added successfully."
 echo "Fille"
 
-var = "Hello World"
-echo $var
+
+echo "File '$filename' created and content added successfully."
 
