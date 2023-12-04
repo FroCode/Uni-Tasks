@@ -1,1 +1,10 @@
-Date,Km,Calories,CAL/KMSunday ,1.5,277,184.6666667Monday,3,300,100Tuesday,2.25,280,124.4444444Wednesday,4.3,420,97.6744186Thursday,3.3,320,96.96969697Friday,4.8,510,106.25Saturday,5,600,120
+Date,Km,Calories,CAL/KM
+Sunday ,1.5,277,184.6666667
+Monday,3,300,100
+Tuesday,2.25,280,124.4444444
+Wednesday,4.3,420,97.6744186
+Thursday,3.3,320,96.96969697
+Friday,4.8,510,106.25
+Saturday,5,600,120
+Week Total,23.15,2907,125
+

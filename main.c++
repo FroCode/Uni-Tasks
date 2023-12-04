@@ -1,46 +1,16 @@
 #include <iostream>
 #include <string>
-
+#include "Car.h"
 using namespace std;
 
-class rectangle {
-private:
-    float length, width;
-
-public:
-    void setLength(float l) {
-        if (l >= 0) {
-            length = l;
-        } else {
-            cout << "Please enter a valid length" << endl;
-        }
-    }
-
-    float getLength() {
-        return length;
-    }
-
-    void setWidth(float w) {
-        if (w >= 0) {
-            width = w;
-        } else {
-            cout << "Please enter a valid width" << endl;
-        }
-    }
-
-    float getWidth() {
-        return width;
-    }
-
-    float getArea() {
-        return length * width;
-    }
-};
 
 int main() {
-    rectangle r1;
-    r1.setLength(10);
-    r1.setWidth(5);
-    cout << "Area: " << r1.getArea() << endl;
+    Car c1;
+    c1.setMaker("Toyota");
+    c1.setColor("Red");
+    c1.setModel(2015);
+    cout << "Maker: " << c1.getMaker() << endl;
+    cout << "Color: " << c1.getColor() << endl;
+    cout << "Model: " << c1.getModel() << endl;
     return 0;
 }
