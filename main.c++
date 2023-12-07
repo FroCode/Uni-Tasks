@@ -19,7 +19,7 @@ class Student {
         };
 };
 int main() {
-    Student stu("Muhammed", 15, 92);
+    Student stu("fr", 15, 92);
     stu.say();
     Student stu2(stu.name, 16, 93);
     stu2.say();
