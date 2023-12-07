@@ -15,7 +15,7 @@ class Student {
             this->name = name;
             this->age = age;
             this->score = score;
-            name = "frfr";
+            name = "fr";
         };
 };
 int main() {
