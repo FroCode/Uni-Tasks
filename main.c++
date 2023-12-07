@@ -22,6 +22,7 @@ int main() {
     Student stu("fr", 15, 92);
     stu.say();
     Student stu2(stu.name, 16, 93);
+    Student st3("fr", 15, 92)
     stu2.say();
     return 0;
 
