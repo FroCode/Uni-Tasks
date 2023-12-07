@@ -1,16 +1,28 @@
 #include <iostream>
 #include <string>
-#include "Car.h"
+
 using namespace std;
 
-
+class Student {
+    public: 
+        string name;
+        int age;
+        int score;
+        void say() {
+            cout << "name: " << name << " age: " << age << " score: " << score << endl;
+        };
+        Student(string name, int age, int score) {
+            this->name = name;
+            this->age = age;
+            this->score = score;
+            name = "FroCode";
+        };
+};
 int main() {
-    Car c1;
-    c1.setMaker("Toyota");
-    c1.setColor("Red");
-    c1.setModel(2015);
-    cout << "Maker: " << c1.getMaker() << endl;
-    cout << "Color: " << c1.getColor() << endl;
-    cout << "Model: " << c1.getModel() << endl;
+    Student stu("frocode", 15, 92);
+    stu.say();
+    Student stu2(stu.name, 16, 93);
+    stu2.say();
     return 0;
-}
+
+};

@@ -1,25 +1,27 @@
-// Car.h
-#pragma once  // Include guard to prevent multiple inclusions
+#ifndef CAR_H
+#define CAR_H
 
 #include <string>
-using namespace std;
-class Car
-{
+
+class Car {
 private:
-    string maker;
-    string color;
+    std::string maker;
+    std::string color;
     int model;
 
 public:
+    // Constructor
     Car();
-    void setmaker(string maker);
-    void setcolor(string color);
-    void setmodel(int model);
-    string getmaker();
-    string getcolor();
-    int getmodel();
-    
 
+    // Getter and setter functions
+    std::string getMaker() const;
+    void setMaker(const std::string& maker);
 
+    std::string getColor() const;
+    void setColor(const std::string& color);
 
+    int getModel() const;
+    void setModel(int model);
 };
+
+#endif // CAR_H
