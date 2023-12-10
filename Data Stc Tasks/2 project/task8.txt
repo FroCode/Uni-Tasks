@@ -1,0 +1,153 @@
+
+### a) Array [3, 41, 52, 26, 38, 57, 9]:
+
+1. **Initial State**: [3, 41, 52, 26, 38, 57, 9]
+
+2. **Divide**: Split the array into two halves: [3, 41, 52] and [26, 38, 57, 9]
+
+3. **Recursive Sorting**:
+   - Sort the left half: [3, 41, 52]
+   - Sort the right half: [9, 26, 38, 57]
+
+4. **Merge**: Merge the two sorted halves:
+   - [3, 9, 26, 38, 41, 52, 57]
+
+5. **Final Sorted Array**: [3, 9, 26, 38, 41, 52, 57]
+
+**Number of Comparisons**: \( \approx 14 \) comparisons were made.
+
+### b) Array [13, 19, 9, 5, 12, 8, 7, 4, 11, 2, 6, 21]:
+
+1. **Initial State**: [13, 19, 9, 5, 12, 8, 7, 4, 11, 2, 6, 21]
+
+2. **Divide**: Split the array into two halves: [13, 19, 9, 5, 12, 8] and [7, 4, 11, 2, 6, 21]
+
+3. **Recursive Sorting**:
+   - Sort the left half: [5, 8, 9, 12, 13, 19]
+   - Sort the right half: [2, 4, 6, 7, 11, 21]
+
+4. **Merge**: Merge the two sorted halves:
+   - [2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 19, 21]
+
+5. **Final Sorted Array**: [2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 19, 21]
+
+**Number of Comparisons**: \( \approx 30 \) comparisons were made.
+
+
+########################################################################################################
+
+Task 8 ) :
+
+########################################################################################################
+
+
+a) Array [3, 41, 52, 26, 38, 57, 9]:
+Initial State: [3, 41, 52, 26, 38, 57, 9]
+
+Pivot Selection: Choose a pivot (let's say 38 for this example)
+
+Partitioning:
+
+Elements less than the pivot: [3, 26, 9]
+Pivot: [38]
+Elements greater than the pivot: [41, 52, 57]
+Recursive Sorting:
+
+Sort the left side: [3, 26, 9]
+Sort the right side: [41, 52, 57]
+Final Sorted Array: [3, 9, 26, 38, 41, 52, 57]
+
+b) Array [13, 19, 9, 5, 12, 8, 7, 4, 11, 2, 6, 21]:
+Initial State: [13, 19, 9, 5, 12, 8, 7, 4, 11, 2, 6, 21]
+
+Pivot Selection: Choose a pivot (let's say 8 for this example)
+
+Partitioning:
+
+Elements less than the pivot: [5, 7, 4, 2, 6]
+Pivot: [8]
+Elements greater than the pivot: [13, 19, 9, 12, 11, 21]
+Recursive Sorting:
+
+Sort the left side: [5, 7, 4, 2, 6]
+Sort the right side: [13, 19, 9, 12, 11, 21]
+Final Sorted Array: [2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 19, 21]
+
+Stack (LIFO Queue):
+A stack is a data structure that follows the Last In, First Out (LIFO) principle. The last element added to the stack is the first one to be removed. A stack can be implemented using arrays or linked lists.
+
+Properties of a Stack:
+
+Push Operation: Adds an element to the top of the stack.
+Pop Operation: Removes the element from the top of the stack.
+Peek/Top Operation: Returns the element at the top of the stack without removing it.
+Size: Number of elements in the stack.
+isEmpty: Checks if the stack is empty.
+Algorithms using Stack:
+
+Expression Evaluation: Stack can be used to evaluate expressions, e.g., infix to postfix conversion.
+Backtracking Algorithms: Stack is used in backtracking algorithms to keep track of choices.
+Depth-First Search (DFS): Stack is used to implement DFS in graphs.
+
+
+########################################################################################################
+
+Given string: "E A S * Y * Q U E * * * S T * * * I O * N * * *"
+
+Push 'E' onto the stack.
+Push 'A' onto the stack.
+Push 'S' onto the stack.
+Pop from the stack ('S').
+Push 'Y' onto the stack.
+Pop from the stack ('Y').
+Pop from the stack ('A').
+Push 'Q' onto the stack.
+Push 'U' onto the stack.
+Push 'E' onto the stack.
+Pop from the stack ('E').
+Pop from the stack ('U').
+Pop from the stack ('Q').
+Pop from the stack ('S').
+Push 'T' onto the stack.
+Pop from the stack ('T').
+Pop from the stack ('S').
+Push 'I' onto the stack.
+Push 'O' onto the stack.
+Pop from the stack ('O').
+Pop from the stack ('I').
+Push 'N' onto the stack.
+Pop from the stack ('N').
+The values removed from the stack are: S, Y, A, E, U, Q, S, T, O, I, N.
+
+10. Treat all operations as operations on the FIFO queue:
+The order of removal would be the same as the order of the operations. The values removed from the queue are: S, Y, Q, U, E, S, T, I, O, N.
+
+11. Treating the pile as a railway siding:
+In this context, the operations are on a stack, and we can think of the "railway siding" as a visualization of the stack operations. The "wejscie" (input) is where elements are pushed onto the stack, and the "wyjscie" (output) is where elements are popped from the stack.
+
+Push 'E' onto the stack (wejscie).
+Push 'A' onto the stack (wejscie).
+Push 'S' onto the stack (wejscie).
+Pop from the stack ('S', wyjscie).
+Push 'Y' onto the stack (wejscie).
+Pop from the stack ('Y', wyjscie).
+Pop from the stack ('A', wyjscie).
+Push 'Q' onto the stack (wejscie).
+Push 'U' onto the stack (wejscie).
+Push 'E' onto the stack (wejscie).
+Pop from the stack ('E', wyjscie).
+Pop from the stack ('U', wyjscie).
+Pop from the stack ('Q', wyjscie).
+Pop from the stack ('S', wyjscie).
+Push 'T' onto the stack (wejscie).
+Pop from the stack ('T', wyjscie).
+Pop from the stack ('S', wyjscie).
+Push 'I' onto the stack (wejscie).
+Push 'O' onto the stack (wejscie).
+Pop from the stack ('O', wyjscie).
+Pop from the stack ('I', wyjscie).
+Push 'N' onto the stack (wejscie).
+Pop from the stack ('N', wyjscie).
+The "wyjscie" represents the elements that are popped from the stack, and the order is S, Y, A, E, U, Q, S, T, O, I, N.
+
+########################################################################################################

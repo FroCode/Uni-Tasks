@@ -8,6 +8,7 @@ class Student {
         string name;
         int age;
         int score;
+        static int count;
         void say() {
             cout << "name: " << name << " age: " << age << " score: " << score << endl;
         };
@@ -23,6 +24,7 @@ int main() {
     stu.say();
     Student stu2(stu.name, 16, 93);
     Student st3("fr", 15, 92);
+    st3.count = 10;
     return 0;
 
 };
