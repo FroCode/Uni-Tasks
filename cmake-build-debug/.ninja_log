@@ -1,3 +1,13 @@
 # ninja log v5
+3	278	7240158245106372	CMakeFiles/Uni_Tasks.dir/main.c++.obj	549e213f76ce4bb3
 0	299	7234837652009752	CMakeFiles/Uni_Tasks.dir/Car.cpp.obj	6a8b2962365b0c29
-5	438	7234837653404211	CMakeFiles/Uni_Tasks.dir/main.c++.obj	549e213f76ce4bb3
+1	283	7240158664057621	build.ninja	f8233d47d55f4ba2
+279	365	7240158245917220	Uni_Tasks.exe	b081ab3a0506711c
+4	284	7240160062029798	CMakeFiles/Uni_Tasks.dir/main.c++.obj	549e213f76ce4bb3
+284	370	7240160062849042	Uni_Tasks.exe	b081ab3a0506711c
+4	344	7240161796252832	CMakeFiles/Uni_Tasks.dir/main.c++.obj	549e213f76ce4bb3
+344	430	7240161797052797	Uni_Tasks.exe	b081ab3a0506711c
+3	351	7240162434113914	CMakeFiles/Uni_Tasks.dir/main.c++.obj	549e213f76ce4bb3
+351	451	7240162435063937	Uni_Tasks.exe	b081ab3a0506711c
+3	317	7240163162671319	CMakeFiles/Uni_Tasks.dir/main.c++.obj	549e213f76ce4bb3
+318	403	7240163163471950	Uni_Tasks.exe	b081ab3a0506711c

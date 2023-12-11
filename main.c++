@@ -3,28 +3,32 @@
 
 using namespace std;
 
-class Student {
-    public: 
-        string name;
-        int age;
-        int score;
-        static int count;
-        void say() {
-            cout << "name: " << name << " age: " << age << " score: " << score << endl;
-        };
-        Student(string name, int age, int score) {
-            this->name = name;
-            this->age = age;
-            this->score = score;
-            name = "fr";
-        };
+class Rec {
+public:
+    int area(int a, int b) {
+        return a * b;
+    }
 };
-int main() {
-    Student stu("fr", 15, 92);
-    stu.say();
-    Student stu2(stu.name, 16, 93);
-    Student st3("fr", 15, 92);
-    st3.count = 10;
-    return 0;
 
+class Sq : public Rec {
+public:
+    int vol(int a, int b, int c) {
+        return a * b * c;
+    }
 };
+
+int main() {
+    int a;
+    cout << "Hello World!" << endl;
+    Sq s;
+
+    // Correcting the usage of the area function
+    cout << s.area(2, 3) << endl;
+
+    // Correcting the usage of cin and endl
+    cin >> a;
+    cout << s.area(3, 5) << endl;
+    cout << s.vol(3, 4, 5) << endl;
+
+    return 0;
+}
