@@ -1,14 +1,14 @@
 from ucimlrepo import fetch_ucirepo 
   
 # fetch dataset 
-wine = fetch_ucirepo(id=109) 
+infrared_thermography_temperature = fetch_ucirepo(id=925) 
   
 # data (as pandas dataframes) 
-X = wine.data.features 
-y = wine.data.targets 
+X = infrared_thermography_temperature.data.features 
+y = infrared_thermography_temperature.data.targets 
   
 # metadata 
-print(wine.metadata) 
+print(infrared_thermography_temperature.metadata) 
   
 # variable information 
-print(wine.variables) 
+print(infrared_thermography_temperature.variables) 
